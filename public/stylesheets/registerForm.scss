@@ -1,0 +1,47 @@
+@import "./variables";
+@import "./mixins";
+
+.register-form{
+    margin: 8rem 0;
+    form{
+        width: 50%;
+        input, textarea, label, select{
+            background-color: $color_blue;
+            border: 1px solid $color_purple;
+            color: $color_purple;
+        }input:focus{
+            background: $color_blue;
+            color: $color_purple;
+        }
+        label{
+            border: none;
+        }
+        ::placeholder{
+            color: $color_green;
+        }
+        button{
+            @include button_register();
+        }
+        button:hover{
+            background-color: $color_purple;
+            color: $color_green;
+        }
+        .error_message{
+            color: red;
+            margin-top: 1rem;
+            margin-left: 2rem;
+        }
+        select{
+            border-radius: 10px;
+            height: 2rem;
+        }
+    }
+}
+@media (max-width:576px){
+    .register-form{
+        margin-top: 10rem;
+        form{
+            width: 90% !important;
+        }
+    } 
+}

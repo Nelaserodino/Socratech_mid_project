@@ -1,0 +1,16 @@
+footer{
+    
+    background-color: $color_blue;
+    border-top: 2px solid $color_green;
+    i{
+        font-size: 2rem;
+        color: $color_green;
+        margin: 1rem;
+    }
+    p{
+        color: $color_green;
+    }
+    a{
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,321 @@
+@font-face {
+  font-family: Gilroy-heavy;
+  src: url("/fonts/Gilroy-Heavy.ttf");
+  font-family: Gilroy-bold;
+  src: url("/fonts/Gilroy-Bold.ttf");
+  font-family: Gilroy-light;
+  src: url("/fonts/Gilroy-Light.ttf");
+}
+body {
+  margin: 0px !important;
+  background-color: #001546 !important;
+  font-family: "Gilroy-bold";
+}
+body .barra-navegacion {
+  background-color: #001546;
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+}
+body .barra-navegacion a {
+  color: #15F0D1;
+  font-size: 1.2rem;
+}
+body .barra-navegacion a:hover {
+  color: #A374FF;
+}
+body .barra-navegacion .logo {
+  width: 8rem;
+}
+body .barra-navegacion button {
+  background-color: #a374ff;
+  border-radius: 50px;
+  transition: all 0.5s;
+}
+body .barra-navegacion button:hover {
+  background-color: #15F0D1;
+}
+@media (max-width: 480px) {
+  body .barra-navegacion {
+    padding: 1rem;
+  }
+}
+
+.section1-banner {
+  background-image: url("/images/old_tv.png");
+  background-size: cover;
+  -o-object-fit: center;
+     object-fit: center;
+  color: white;
+  font-family: gilroy-heavy;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 90vh;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.section1-banner .video-container {
+  height: 30vw;
+}
+.section1-banner .video-container .video {
+  width: 100%;
+  height: 100%;
+  transform: rotateX(9.2301deg) rotateY(-14.12deg);
+  border-radius: 30px;
+}
+.section1-banner .title-lg {
+  font-size: 5rem;
+  letter-spacing: 0.1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.section1-banner .button-createAccount {
+  background-color: #001546;
+  border-radius: 50px;
+  font-size: 1rem;
+  padding: 1rem;
+  width: 50%;
+  font-family: gilroy-bold;
+  border: none;
+  transition: all 0.5s;
+}
+.section1-banner .button-createAccount a {
+  text-decoration: none;
+  color: white;
+}
+.section1-banner .button-createAccount:hover {
+  background-color: #a374ff;
+  color: #001546;
+}
+
+.section2-description {
+  color: white;
+}
+.section2-description .sub-heading {
+  color: #a374ff;
+  font-family: "Gilroy-heavy";
+}
+.section2-description .description {
+  font-size: 24px;
+  font-family: gilroy-bold;
+  margin-left: 20px;
+}
+.section2-description .description .purple {
+  color: #a374ff;
+}
+.section2-description .description .orange {
+  color: #FFD074;
+}
+.section2-description .description .aqua {
+  color: #15F0D1;
+}
+.section2-description button {
+  background-color: #001546;
+  border-radius: 50px;
+  font-size: 1rem;
+  padding: 1rem;
+  width: 50%;
+  font-family: gilroy-bold;
+  border: none;
+  transition: all 0.5s;
+  width: 20%;
+  background-color: #15F0D1;
+}
+.section2-description button a {
+  text-decoration: none;
+  color: white;
+}
+.section2-description button:hover {
+  background-color: #a374ff;
+  border: 1px solid #FFD074;
+  transform: scale(1.1);
+}
+
+.section3-collectors {
+  background-color: white;
+  color: #FFD074;
+  text-align: center;
+}
+.section3-collectors svg {
+  fill: #001546;
+  transform: rotate(180deg);
+  position: relative;
+  left: 0;
+  bottom: 2px;
+}
+.section3-collectors svg .top {
+  width: 100%;
+  position: absolute;
+}
+.section3-collectors h2 {
+  font-size: 2.5rem;
+  margin-left: -10rem;
+}
+.section3-collectors h2 div span {
+  font-size: 4rem;
+  margin-left: 1rem;
+  color: #a374ff;
+  margin-left: 15rem;
+}
+.section3-collectors .collector_card {
+  box-shadow: 3px 5px 5px rgba(3, 32, 51, 0.8);
+  margin: 2rem;
+  transition: transform 0.5s;
+}
+.section3-collectors .collector_card img {
+  filter: grayscale(1);
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: all 500ms ease-out;
+}
+.section3-collectors .collector_card div {
+  background-color: #001546;
+}
+.section3-collectors .collector_card div h5 {
+  color: white;
+}
+.section3-collectors .collector_card div button {
+  background-color: #001546;
+  border-radius: 50px;
+  font-size: 1rem;
+  padding: 1rem;
+  width: 50%;
+  font-family: gilroy-bold;
+  border: none;
+  transition: all 0.5s;
+  border: 2px solid #a374ff;
+}
+.section3-collectors .collector_card div button a {
+  text-decoration: none;
+  color: white;
+}
+.section3-collectors .collector_card div button:hover {
+  background-color: #a374ff;
+  border: 1px solid #15F0D1;
+}
+.section3-collectors .collector_card:hover img {
+  filter: grayscale(0);
+}
+.section3-collectors .collector_card:hover {
+  transform: scale(1.1);
+}
+
+.section4-categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 4rem;
+}
+.section4-categories .categories-title h2 {
+  font-size: 2.5rem;
+  color: #15F0D1;
+}
+.section4-categories .categories-title h2 div span {
+  font-size: 3.5rem;
+  margin-left: 1rem;
+  color: #a374ff;
+}
+.section4-categories .categories-card {
+  margin: 3rem 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.section4-categories .categories-card .tarjeta-categoria {
+  background-color: #001546;
+  border: 2px solid #a374ff;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  transition: all 0.5s;
+}
+.section4-categories .categories-card .tarjeta-categoria a {
+  width: 70%;
+}
+.section4-categories .categories-card .tarjeta-categoria a img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.section4-categories .categories-card .tarjeta-categoria:hover {
+  transform: scale(1.1);
+  border: 2px solid #15F0D1;
+}
+
+footer footer {
+  background-color: #001546;
+  border-top: 2px solid #15F0D1;
+}
+footer footer i {
+  font-size: 2rem;
+  color: #15F0D1;
+  margin: 1rem;
+}
+footer footer p {
+  color: #15F0D1;
+}
+footer footer a {
+  text-decoration: none;
+}
+
+@media (max-width: 576px) {
+  .section1-banner {
+    height: 90vh;
+    margin-top: 5rem;
+    padding: 1rem;
+  }
+  .section1-banner .video-container {
+    display: none;
+  }
+  .section2-description {
+    justify-content: center !important;
+  }
+  .section2-description div {
+    padding: 0 !important;
+  }
+  .section2-description div div {
+    flex-direction: column;
+  }
+  .section2-description .button-container {
+    margin-top: 3rem;
+    width: 100%;
+  }
+  .section2-description .button-container button {
+    width: 100%;
+  }
+  .section3-collectors svg {
+    bottom: 6px;
+  }
+  .section3-collectors h2 {
+    font-size: 2rem;
+    margin-left: -10rem;
+  }
+  .section3-collectors h2 div span {
+    font-size: 3rem;
+  }
+  .section4-categories .categories-card .tarjeta-categoria {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+@media (max-width: 992px) {
+  .section2-description {
+    margin: 5rem 1rem !important;
+  }
+  .section3-collectors svg {
+    bottom: 7px;
+  }
+}/*# sourceMappingURL=style.css.map */

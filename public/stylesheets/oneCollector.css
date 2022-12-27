@@ -1,0 +1,167 @@
+.collector-card {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: 0 0 50px 15px #48abe0;
+  border-radius: 10px;
+  font-family: "Gilroy-light";
+}
+.collector-card .collector_img {
+  border: none;
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+  background-color: #001546;
+}
+.collector-card .collector_img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.collector-card .collector_description {
+  padding: 1rem;
+}
+.collector-card .collector_description h4 {
+  color: #15F0D1;
+}
+.collector-card .collector_description span {
+  color: white;
+  font-family: "Gilroy-bold";
+}
+.collector-card .collector_description p {
+  color: #a374ff;
+  margin: 1rem 0;
+}
+.collector-card .collector_description .edit, .collector-card .collector_description .delete {
+  background-color: transparent;
+  border: 2px solid #a374ff;
+  border-radius: 10px;
+  margin: 1rem;
+  padding: 0.5rem;
+  transition: all 0.5s;
+}
+.collector-card .collector_description .edit a, .collector-card .collector_description .delete a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #15F0D1;
+}
+.collector-card .collector_description .edit:hover, .collector-card .collector_description .delete:hover {
+  background-color: #a374ff;
+  font-family: "Gilroy-bold";
+}
+
+.section2-collectibles {
+  background-color: white;
+  margin-top: 3rem;
+  padding-top: 7rem;
+}
+.section2-collectibles .icon-add {
+  font-size: 5rem !important;
+  color: #a374ff;
+  transition: 0.5s;
+  position: relative;
+  margin-right: 1rem;
+}
+.section2-collectibles .icon-add:hover {
+  color: #15F0D1;
+  transform: scale(1.1);
+}
+.section2-collectibles .card-collectible {
+  background-color: #001546;
+  border: none;
+  width: 22rem;
+  height: 35rem;
+}
+.section2-collectibles .card-collectible .collectible-img {
+  width: 100%;
+  height: 50%;
+}
+.section2-collectibles .card-collectible .collectible-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.section2-collectibles .card-collectible .collectible-description {
+  color: white;
+  font-family: "Gilroy-light";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.section2-collectibles .card-collectible .collectible-description h6 {
+  margin: 1rem 0;
+}
+.section2-collectibles .card-collectible .collectible-description .edit {
+  background-color: #15F0D1;
+  border-radius: 50px;
+  border: none;
+  font-family: gilroy-bold;
+  text-decoration: none;
+  width: 20%;
+  color: white;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  transition: all 0.5s;
+}
+.section2-collectibles .card-collectible .collectible-description .edit span {
+  font-size: 2rem;
+}
+.section2-collectibles .card-collectible .collectible-description .edit a {
+  text-decoration: none;
+  color: #001546;
+}
+.section2-collectibles .card-collectible .collectible-description .edit:hover {
+  background-color: #a374ff;
+}
+.section2-collectibles .card-collectible .collectible-description .delete {
+  background-color: #FFD074;
+  border-radius: 50px;
+  border: none;
+  font-family: gilroy-bold;
+  text-decoration: none;
+  width: 20%;
+  color: white;
+  margin-right: 1rem;
+  padding: 0.5rem;
+}
+.section2-collectibles .card-collectible .collectible-description .delete span {
+  font-size: 2rem;
+}
+.section2-collectibles .card-collectible .collectible-description .delete a {
+  text-decoration: none;
+  color: #001546;
+}
+.section2-collectibles .card-collectible .collectible-description .delete:hover {
+  background-color: red;
+}
+
+footer footer {
+  background-color: #001546;
+  border-top: 2px solid #15F0D1;
+}
+footer footer i {
+  font-size: 2rem;
+  color: #15F0D1;
+  margin: 1rem;
+}
+footer footer p {
+  color: #15F0D1;
+}
+footer footer a {
+  text-decoration: none;
+}
+
+@media (max-width: 575px) {
+  .collector-card {
+    flex-direction: column;
+    width: 80%;
+  }
+  .collectible-description {
+    justify-content: space-evenly !important;
+  }
+}/*# sourceMappingURL=oneCollector.css.map */

@@ -1,0 +1,267 @@
+@font-face{
+    font-family: Gilroy-heavy;
+    src: url("/fonts/Gilroy-Heavy.ttf");
+    font-family: Gilroy-bold;
+    src: url("/fonts/Gilroy-Bold.ttf");
+    font-family: Gilroy-light;
+    src: url("/fonts/Gilroy-Light.ttf");
+}
+@import "./variables";
+@import "./mixins";
+
+body{
+    margin: 0px !important;
+    background-color: $color_blue !important;
+    font-family: $font_bold;
+    @import "navbar";
+}
+//Section 1 - banner/video
+.section1-banner{
+    background-image: url("/images/old_tv.png");
+    background-size: cover;
+    object-fit: center;
+    color: white;
+    font-family: gilroy-heavy;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 90vh;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    .video-container{
+        height: 30vw;     
+        .video{
+            width: 100%;
+            height: 100%;
+            transform: rotateX(9.2301deg) rotateY(-14.120deg);
+            border-radius: 30px;
+        }
+    }
+    .title-lg{
+        font-size: 5rem;
+        letter-spacing: 0.1em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .button-createAccount{
+        @include button_createAccount();
+    }
+    .button-createAccount:hover{
+        background-color: $color_purple;
+        color: $color_blue;
+    }
+}
+
+//Section 2 - Description
+.section2-description{
+    color: white;
+    .sub-heading{
+        color: $color_purple;
+        font-family: $font_heavy;
+        // width: 30%;
+    }
+    .description{
+        font-size: 24px;
+        font-family: gilroy-bold;
+        margin-left: 20px;
+        .purple{
+            color: $color_purple;
+        }
+        .orange{
+            color: $color_orange;
+        }
+        .aqua{
+            color: $color_green;
+        }
+    }
+    button{
+        @include button_createAccount();
+        width: 20%;
+        background-color: $color_green;
+    }
+    button:hover{
+        background-color: $color_purple;
+        border: 1px solid $color_orange;
+        transform: scale(1.1);
+    }
+}
+.section3-collectors{
+    svg{
+        fill: $color_blue;
+        transform: rotate(180deg);
+        position: relative;
+        left: 0;
+        bottom: 2px;
+        .top{
+            width: 100%;
+            position: absolute;
+            
+        }       
+    } 
+    background-color: white;
+    color: $color_orange;
+    text-align: center;
+    h2{
+        font-size: 2.5rem;
+        margin-left: -10rem;
+        div{
+            span{
+                font-size: 4rem;
+                margin-left: 1rem;
+                color: $color_purple;
+                margin-left: 15rem;
+            }
+        }
+    }
+    .collector_card{
+        box-shadow: 3px 5px 5px rgba(3,32,51,.8);
+        margin: 2rem;
+        transition: transform .5s;
+        img{
+            filter: grayscale(1);
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            object-position: center;                
+            transition: all 500ms ease-out;
+            }
+        div{
+            background-color: $color_blue;
+            h5{
+                color: white;
+            }
+            button{
+                @include button_createAccount();
+                border: 2px solid $color_purple;
+            }
+            button:hover{
+                background-color: $color_purple;
+                border: 1px solid $color_green;
+            }
+        }
+    }
+    .collector_card:hover img{
+        filter: grayscale(0);
+    }
+    .collector_card:hover{
+        transform: scale(1.1);
+    }
+    
+}
+.section4-categories{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 4rem;
+   .categories-title{
+    h2{
+        font-size: 2.5rem;
+        color: $color_green;
+        div{
+            span{
+                font-size: 3.5rem;
+                margin-left: 1rem;
+                color: $color_purple;
+            }
+        }
+    }
+   }
+   .categories-card{
+    margin: 3rem 0!important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .tarjeta-categoria{
+        background-color: $color_blue;
+        border: 2px solid $color_purple;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        margin: 0.5rem;
+        transition: all 0.5s;
+        a{
+            width: 70%;
+            img{
+                width: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+    }
+    .tarjeta-categoria:hover{
+            transform: scale(1.1);
+            border: 2px solid $color_green;
+    }
+   }
+    
+}
+
+footer{
+    @import "footer";
+}
+
+@media (max-width:576px){
+    .section1-banner{
+        height: 90vh;
+        margin-top: 5rem;
+        padding: 1rem;
+        .video-container{
+            display: none;
+        }
+    }
+    .section2-description{
+        justify-content: center !important;
+        div{
+            padding: 0 !important;
+            div{
+                flex-direction: column;
+            }
+        }
+        .button-container{
+            margin-top: 3rem;
+            width: 100%;
+                button{
+                    width: 100%;
+                }
+        }
+    }
+    .section3-collectors{
+        svg{
+            bottom: 6px;    
+        }
+        h2{
+            font-size: 2rem;
+            margin-left: -10rem;
+            div{
+                span{
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+    .section4-categories{
+        .categories-card{
+            .tarjeta-categoria{
+                width: 6rem;
+                height: 6rem;
+            }
+        }
+       
+    }
+    
+}
+@media (max-width:992px){
+    .section2-description{
+        margin: 5rem 1rem !important;
+    }
+    .section3-collectors{
+        svg{
+            bottom: 7px;    
+        }
+    }
+}

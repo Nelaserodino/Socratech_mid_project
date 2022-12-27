@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play-Back</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/registerForm.css" />
+  </head>
+  <body>
+    <%- include("navbar") %>
+    <div class="register-form d-flex justify-content-center">
+      <form
+        class="row g-3"
+        action="/collector/registerCollector"
+        enctype="multipart/form-data"
+        method="post"
+      >
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Name"
+          aria-label="default input example"
+          name="collector_name"
+          required
+        />
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Surname"
+          aria-label="default input example"
+          name="surname"
+          required
+          maxlength="12"
+        />
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Phone number"
+          aria-label="default input example"
+          name="phone"
+          required
+        />
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Your favourite sort of collectibles"
+          aria-label="default input example"
+          name="interests"
+          required
+          maxlength="150"
+        />
+        <textarea
+          name="collection_description"
+          id=""
+          cols="30"
+          rows="8"
+          minlength="1"
+          maxlength="250"
+          style="resize: none"
+          placeholder="Your description..."
+        ></textarea>
+        <input
+          class="form-control"
+          type="email"
+          placeholder="Email"
+          aria-label="default input example"
+          name="email"
+        />
+        <input
+          class="form-control"
+          type="password"
+          placeholder="Password"
+          aria-label="default input example"
+          name="password"
+        />
+        <input
+          class="form-control"
+          type="file"
+          aria-label="default input example"
+          name="img"
+        />
+
+        <div class="col-auto d-flex">
+          <button type="submit">Register</button>
+          <p class="error_message"><%= mensaje %></p>
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+.section1-collectibles {
+  margin-top: 7rem;
+  background-color: white;
+  color: #FFD074;
+  text-align: center;
+}
+.section1-collectibles svg {
+  fill: #001546;
+  transform: rotate(180deg);
+  position: relative;
+  left: 0;
+  bottom: 2px;
+}
+.section1-collectibles svg .top {
+  width: 100%;
+  position: absolute;
+}
+.section1-collectibles h2 {
+  padding-top: 3rem;
+  font-size: 2.5rem;
+  margin-left: -10rem;
+}
+.section1-collectibles h2 div span {
+  font-size: 4rem;
+  margin-left: 1rem;
+  color: #a374ff;
+  margin-left: 15rem;
+}
+.section1-collectibles .collectible_card {
+  box-shadow: 3px 5px 5px rgba(3, 32, 51, 0.8);
+  margin: 2rem;
+  transition: transform 0.5s;
+}
+.section1-collectibles .collectible_card a {
+  width: 100%;
+  height: 100%;
+}
+.section1-collectibles .collectible_card a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: all 500ms ease-out;
+}
+.section1-collectibles .collectible_card div {
+  background-color: #001546;
+}
+.section1-collectibles .collectible_card div h5 {
+  color: white;
+}
+.section1-collectibles .collectible_card:hover {
+  transform: scale(1.05);
+}/*# sourceMappingURL=allCollectibles.css.map */

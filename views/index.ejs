@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play-back</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script
+      src="https://kit.fontawesome.com/76b2ab3789.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <%- include('navbar') %>
+    <section
+      class="section1-banner d-flex align-items-center justify-content-evenly"
+    >
+      <div>
+        <h2 class="title-lg">
+          <span>get ready</span>
+          <span>to play</span>
+          <span>again</span>
+        </h2>
+        <button class="button-createAccount">
+          <a href="/collector/registerForm">Create Account</a>
+        </button>
+      </div>
+      <div class="video-container">
+        <video
+          class="video"
+          src="/images/video-bg.mov"
+          muted
+          autoplay
+          loop
+          playsinline
+        ></video>
+      </div>
+    </section>
+    <section class="section2-description d-flex flex-column m-5">
+      <div
+        class="d-flex mt-5 px-5 justify-content-start"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
+        <div class="d-flex col-sm-10 col-md-10 col-lg-8">
+          <p class="sub-heading">WHAT WE DO</p>
+          <p class="description">
+            Enjoy our community´s collection of some of the
+            <span class="orange">best-known</span
+            ><span class="purple"> action figures</span> and
+            <span class="purple">toys</span> from
+            <span class="aqua"> the 80´s.</span>
+          </p>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end mt-4 px-5">
+        <div
+          class="d-flex col-sm-10 col-md-10 col-lg-8"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        >
+          <p class="sub-heading">WANT TO BE PART?</p>
+          <p class="description">
+            Join our
+            <span class="orange">collector´s community</span> and
+            <span class="purple">start selling </span> or just
+            <span class="aqua"> showing </span> your treasures.
+          </p>
+        </div>
+      </div>
+      <div
+        class="d-flex justify-content-end p-2 col-lg-10 button-container"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
+        <button class="button-createAccount">
+          <a href="/collector/registerForm">Get on board!</a>
+        </button>
+      </div>
+    </section>
+
+    <section
+      class="section3-collectors mt-5"
+      data-aos="fade-up"
+      data-aos-duration="3000"
+    >
+      <svg
+        class="top"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 1440 48"
+        xml:space="preserve"
+        alt=""
+        aria-hidden="true"
+      >
+        <path d="M1440,48H0V0c0,0,205,47,720,47s720-46.9,720-46.9V48z"></path>
+      </svg>
+      <h2 class="mt-5">
+        <span> Meet the </span>
+        <div>
+          <span>Collectors</span>
+        </div>
+      </h2>
+      <div class="d-flex flex-wrap justify-content-center mt-5">
+        <% resultCollectors.forEach( collector => { %>
+        <div class="card collector_card" style="width: 20rem">
+          <% if(collector.collector_img != "avatar.jpeg") { %>
+          <a href="/collector/oneCollector/<%= collector.collector_id %>"
+            ><img
+              src="/images/collectors/<%= collector.collector_img %>"
+              class="card-img-top"
+              alt="..."
+          /></a>
+
+          <% } else { %>
+          <a href="/collector/oneCollector/<%= collector.collector_id %>"
+            ><img
+              src="/images/collectors/avatar.png"
+              class="card-img-top"
+              alt="..."
+          /></a>
+
+          <% } %>
+
+          <div class="card-body">
+            <h5 class="card-title"><%= collector.collector_name %></h5>
+            <button class="w-75">
+              <a
+                href="/collector/oneCollector/<%= collector.collector_id %>"
+                class=""
+                >Explore treasures</a
+              >
+            </button>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </section>
+    <section
+      class="section4-categories"
+      data-aos="fade-up"
+      data-aos-duration="3000"
+    >
+      <div class="categories-title">
+        <h2 class="mt-5">
+          <span> Explore by </span>
+          <div>
+            <span>Category</span>
+          </div>
+        </h2>
+      </div>
+      <div class="categories-card">
+        <% resultCategory.forEach( category => { %>
+        <div class="card tarjeta-categoria">
+          <a href="/category/oneCategory/<%= category.category_id %>">
+            <img
+              class="card-img-top"
+              src="/images/<%= category.category_img %>"
+              alt="Card image cap"
+            />
+          </a>
+        </div>
+        <% }) %>
+      </div>
+    </section>
+
+    <footer><%- include('footer') %></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+.register-form {
+  margin: 8rem 0;
+}
+.register-form form {
+  width: 50%;
+}
+.register-form form input, .register-form form textarea, .register-form form label, .register-form form select {
+  background-color: #001546;
+  border: 1px solid #a374ff;
+  color: #a374ff;
+}
+.register-form form input:focus {
+  background: #001546;
+  color: #a374ff;
+}
+.register-form form label {
+  border: none;
+}
+.register-form form ::-moz-placeholder {
+  color: #15F0D1;
+}
+.register-form form :-ms-input-placeholder {
+  color: #15F0D1;
+}
+.register-form form ::placeholder {
+  color: #15F0D1;
+}
+.register-form form button {
+  background-color: #15F0D1;
+  border-radius: 20px;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  font-family: gilroy-bold;
+  border: none;
+  color: #a374ff;
+  height: 50px;
+}
+.register-form form button a {
+  text-decoration: none;
+  color: #001546;
+}
+.register-form form button:hover {
+  background-color: #a374ff;
+  color: #15F0D1;
+}
+.register-form form .error_message {
+  color: red;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+.register-form form select {
+  border-radius: 10px;
+  height: 2rem;
+}
+
+@media (max-width: 576px) {
+  .register-form {
+    margin-top: 10rem;
+  }
+  .register-form form {
+    width: 90% !important;
+  }
+}/*# sourceMappingURL=registerForm.css.map */

@@ -1,0 +1,29 @@
+.barra-navegacion{
+    background-color: #001546;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+   
+    a{
+        color: $color_green;
+        font-size: 1.2rem;
+    }
+    a:hover{
+        color: #A374FF;
+    }
+    .logo{
+        width: 8rem;
+    }
+    button{
+       @include button_menu();
+       transition: all 0.5s;
+    }
+    button:hover{
+        background-color: $color_green;
+    }
+}
+@media (max-width:480px){
+    .barra-navegacion{
+        padding: 1rem;
+    }
+}

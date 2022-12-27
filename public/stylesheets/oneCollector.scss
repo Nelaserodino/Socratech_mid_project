@@ -1,0 +1,125 @@
+@import "./variables";
+@import "./mixins";
+
+
+.collector-card{
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-shadow: 0 0 50px 15px #48abe0;
+    border-radius: 10px;
+    font-family: $font_light;
+    .collector_img{
+        border: none;
+        display: flex;
+        align-items: center;
+        padding-top: 1rem;
+        background-color: $color_blue;
+        img{
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    .collector_description{
+       padding: 1rem;
+        h4{
+            color:$color_green ;
+        }
+        span{
+            color: white;
+            font-family: $font_bold;
+        }
+        p{
+            color: $color_purple;
+            margin: 1rem 0;
+        }
+        .edit, .delete{
+            background-color: transparent;
+            border: 2px solid $color_purple;
+            border-radius: 10px;
+            margin: 1rem;
+            padding: 0.5rem;
+            transition: all 0.5s;
+            a{
+                font-size: 1rem;
+                text-decoration: none;
+                color: $color_green;
+            }
+        }
+        .edit:hover, .delete:hover{
+            background-color: $color_purple;
+            font-family: $font_bold;
+        }
+    }
+}
+.section2-collectibles{
+    background-color: white;
+    margin-top: 3rem;
+    padding-top: 7rem;
+    .icon-add{
+        font-size: 5rem !important;
+        color: $color_purple;
+        transition: .5s;
+        position: relative;
+        margin-right: 1rem;
+    }
+    .icon-add:hover{
+        color: $color_green;
+        transform: scale(1.1);
+    }
+    
+    .card-collectible{
+        background-color: $color_blue;
+        border: none;
+        width: 22rem;
+        height: 35rem;
+        .collectible-img{
+            width: 100%;
+            height: 50%;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;       
+                object-position: center;      
+            }
+        }
+        .collectible-description{
+            color: white;
+            font-family: $font-light;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h6{
+                margin: 1rem 0;
+            }
+            .edit{
+                @include button_edit();
+                transition: all 0.5s;
+            }
+            .edit:hover{
+                background-color: $color_purple;
+            }
+            .delete{
+                @include button_delete();
+            }
+            .delete:hover{
+                background-color: red;
+            }
+        }
+    }
+}
+footer{
+    @import "footer";
+}
+
+@media (max-width:575px){
+    .collector-card{
+        flex-direction: column;
+        width: 80%;
+    }
+    .collectible-description{
+        justify-content: space-evenly !important;
+    }
+}
+
